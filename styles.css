@@ -1,0 +1,197 @@
+.hero-felicitacion {
+    position: relative;
+    height: 100vh;
+    background-image: url("img/principal.JPG"); /* Usá tu foto real */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    border: none;
+  }
+  
+  .hero-felicitacion .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece para que resalte el texto */
+    z-index: 1;
+  }
+  
+  .titulo-felicitacion {
+    position: relative;
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+    z-index: 2;
+    padding: 0 20px;
+    max-width: 90%;
+    line-height: 1.4;
+  }
+  
+  /* RESPONSIVE 👇 */
+  @media (min-width: 768px) {
+    .titulo-felicitacion {
+      font-size: 4rem;
+      max-width: 800px;
+    }
+  }
+  
+  /* segunda seccion */
+  .carta-felicitacion {
+    background: linear-gradient(to bottom, #432818, #f9e9f0); /* tonos cálidos suaves */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contenido-carta {
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.6); /* semi-transparente tipo carta */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'poppins', non-serif;
+    font-size: 1.6rem;
+    color: #4d4d4d;
+    line-height: 1.7;
+    text-align: justify;
+  }
+  
+  .contenido-carta h2 {
+    font-family: 'poppins', non-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #432818;
+  }
+  
+  .firma {
+    margin-top: 40px;
+     font-size: 1.4rem;
+  }
+
+  @media (max-width: 768px) {
+    .carta-felicitacion {
+      padding: 40px 10px;
+    }
+  
+    .contenido-carta {
+      padding: 20px;
+    }
+  
+    .carta-felicitacion h2 {
+      font-size: 2rem;
+    }
+  
+    .carta-felicitacion p {
+      font-size: 1rem;
+    }
+  
+    .firma {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* tercera seccion linea de tiempo */
+  .slideshow-section {
+    height: 100vh;
+    background: linear-gradient(to bottom, #432818, #f9e9f0); /* tonos cálidos suaves */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .slideshow-container {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .slide {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .slide.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .slideshow-container {
+      width: 95%;
+      border-radius: 15px;
+    }
+  
+    .slide {
+      border-radius: 15px;
+    }
+  }
+/* mensaje final */
+.mensaje-final {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(to top, #432818, #f9e9f0); /* tonos cálidos suaves */
+    color: #fff;
+    position: relative; /* Aseguramos que la sección esté correctamente posicionada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Aseguramos que ocupe toda la altura de la pantalla */
+    z-index: 1;
+}
+  
+  .mensaje-final h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'poppins', sans-serif;
+    color: #432818;
+  }
+  
+  .mensaje-final p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 90%; /* Limitar el ancho en dispositivos pequeños */
+    font-family: outfit;
+  }
+ 
+  
+  @media screen and (max-width: 600px) {
+    .mensaje-final h2 {
+      font-size: 2rem; /* Ajustamos el tamaño del título para móviles */
+    }
+  
+    .mensaje-final p {
+      font-size: 1.1rem; /* Reducimos el tamaño del texto */
+      max-width: 100%; /* Aseguramos que el texto no se quede corto */
+    }
+  }
+  
+  
+  /* otros */
+  
+  #toggle-music {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;}

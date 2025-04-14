@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="hero-felicitacion">
+        <div class="overlay"></div>
+        <h1 class="titulo-felicitacion" data-aos="fade-up">Felices tantos años de amor, mamá y papá</h1>
+   
+    </section>
+
+      <section class="carta-felicitacion" data-aos="fade-up">
+        <div class="contenido-carta">
+          <h2>Mamá y papá:</h2>
+          <p>
+            Hoy celebran muchos años de amor, paciencia, risas y trabajo en equipo.  
+            Y yo no puedo estar más agradecida por haber sido testigo de su historia.  
+            Ustedes me enseñaron con el ejemplo lo que significa amar de verdad.  
+            Gracias por cada abrazo, cada comida compartida y cada vez que estuvieron para mí. 
+            Felices años de amor eterno! ♡
+          </p>
+          <p class="firma">Con todo mi amor,  
+          <br>Belu 💌</p>
+        </div>
+      </section>
+
+      <section class="slideshow-section">
+        <div class="slideshow-container">
+          <img class="slide" src="img/3v.JPG" alt="Foto 1">
+          <img class="slide" src="img/4vv.jpeg" alt="Foto 2">
+          <img class="slide" src="img/5v.jpeg" alt="Foto 3">
+          <img class="slide" src="img/6v.jpeg" alt="Foto 3">
+          <img class="slide" src="img/7v.jpeg" alt="Foto 3">
+          <img class="slide" src="img/8v.jpeg" alt="Foto 3">
+          <img class="slide" src="img/9v.jpeg" alt="Foto 3">
+          <img class="slide" src="img/10v.jpeg" alt="Foto 3">
+          <!-- Agregá más imágenes si querés -->
+        </div>
+      </section>
+          
+      
+      <audio id="bg-music" autoplay loop>
+        <source src="audio/hastaLaRaiz.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5 😢.
+      </audio>
+      
+
+      <section class="mensaje-final">
+        <h2>Los quiero mucho!</h2>
+        <p>Gracias por todo lo que me han enseñado, por su amor infinito y por estar siempre a mi lado. Los quiero más de lo que las palabras pueden expresar. Espero en algún momento devolverles lo que tanto me han dado.</p>
+        <div id="particles-js" style="height: 100vh; width: 100%;"></div>
+    </section>
+      
+
+
+      <button id="toggle-music">🔊</button>
+
+      <script>
+        const toggleBtn = document.getElementById("toggle-music");
+        const music = document.getElementById("bg-music");
+      
+        toggleBtn.addEventListener("click", () => {
+          if (music.paused) {
+            music.play();
+            toggleBtn.textContent = "🔊";
+          } else {
+            music.pause();
+            toggleBtn.textContent = "🔇";
+          }
+        });
+      </script>
+
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const music = document.getElementById("bg-music");
+      
+          // Intenta reproducir apenas se pueda
+          function tryPlay() {
+            music.play().catch(() => {
+              // Si no puede por autoplay, espera click
+              document.body.addEventListener("click", () => {
+                music.play();
+              }, { once: true });
+            });
+          }
+      
+          tryPlay();
+        });
+      </script>
+       
+      
+       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+
+<!-- Carga tsParticles primero -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
+
+<!-- Tu script -->
+<script src="script.js"></script>
+ 
+
+
+</body>
+</html>
