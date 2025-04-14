@@ -1,4 +1,4 @@
-# 💌 Heartfelt celebration to my parent's anniversary 
+# 💌 Heartfelt celebration to my parents' anniversary 
 
 ## 🌟 Features
 
